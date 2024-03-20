@@ -195,12 +195,12 @@
 
             </div>
             <div></div>
-            <div class="grid grid-cols-2 mx-auto rounded-3xl bg-black p-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-3 gap-7">
+            <div class="grid grid-cols-2 mx-auto rounded-2xl bg-gray-300 p-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-3 gap-7">
                 @foreach($data as $data)
-                <a href="#" class="group bg-white border rounded p-2">
+                <a href="#" class="group bg-white  shadow-2xl shadow-gray-800/100 rounded-2xl p-2">
                     <div
-                        class="flex justify-center rounded mt-2 ">
-                        <img src="{{ asset('gasimage/' . $data->image) }}" alt="gasimage" class="rounded w-full  rounded-lg">
+                        class="flex justify-center rounded h-60 mt-2 transition delay-10000   hover:p-5 ">
+                        <img src="{{ asset('gasimage/' . $data->image) }}" alt="gasimage" class="rounded w-full   rounded-lg">
 
                     </div>
                     <div class="flex  justify-center">
@@ -212,7 +212,7 @@
                         <p class="mt-1 text-lg font-medium text-rose-600">{{$data->size}}</p>
                     </div>
                     <div class="flex justify-center ">
-                        <button class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        <button class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full">
                             Add to cart
                         </button>
                     </div>

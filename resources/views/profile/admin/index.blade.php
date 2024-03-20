@@ -9,7 +9,10 @@
     <title>Document</title>
 </head>
 <body class="max-w-3xl mx-auto mt-4">
+    <div class="mx-auto max-w-2xl my-4 text-center">
 
+        <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
+    </div>
 
 <section class="bg-white rounded-3xl dark:bg-gray-800 mx-auto md ">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
@@ -64,82 +67,69 @@
             </button>
         </form>
     </div>
-    <div class="flex flex-col">
-  <div class="-m-1.5 overflow-x-auto">
-    <div class="p-1.5 min-w-full inline-block align-middle">
-      <div class="border rounded-lg divide-y divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
-        <div class="py-3 px-4">
-          <div class="relative max-w-xs">
-            <label class="sr-only">Search</label>
-            <input type="text" name="hs-table-with-pagination-search" id="hs-table-with-pagination-search" class="py-2 px-3 ps-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600" placeholder="Search for items">
-            <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3">
-              <svg class="h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            </div>
-          </div>
-        </div>
-        <div class="overflow-hidden">
-          <table class="min-w-full mt-5divide-y divide-gray-200 dark:divide-gray-700">
-            <thead class="bg-gray-50 dark:bg-gray-700">
-              <tr>
-                <th scope="col" class="py-3 px-4 pe-0">
-                  <div class="flex items-center h-5">
-                    <input id="hs-table-pagination-checkbox-all" type="checkbox" class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                    <label for="hs-table-pagination-checkbox-all" class="sr-only">Checkbox</label>
-                  </div>
-                </th>
-                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">brand</th>
-                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">type</th>
-                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">size</th>
-                <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">price</th>
-                <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">image</th>
-                <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
-                <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
-              </tr>
-            </thead>
-            @foreach($data as $data)
-            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-              <tr>
-                <td class="py-3 ps-4">
-                  <div class="flex items-center h-5">
-                    <input id="hs-table-pagination-checkbox-1" type="checkbox" class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                    <label for="hs-table-pagination-checkbox-1" class="sr-only">Checkbox</label>
-                  </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{{$data->brand}}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">refill</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">50kg</td>
-                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">1400</td>
-                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">image</td>
-                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium"> <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent
-                  text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Delete</button>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium"> <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent
-                    text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Edit</button>
-                  </td>
-              </tr>
 
-
-            </tbody>
-            @endforeach
-          </table>
-        </div>
-        <div class="py-1 px-4">
-          <nav class="flex items-center space-x-1">
-            <button type="button" class="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-              <span aria-hidden="true">«</span>
-              <span class="sr-only">Previous</span>
-            </button>
-            <button type="button" class="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10" aria-current="page">1</button>
-            <button type="button" class="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10">2</button>
-            <button type="button" class="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10">3</button>
-            <button type="button" class="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-              <span class="sr-only">Next</span>
-              <span aria-hidden="true">»</span>
-            </button>
-          </nav>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
   </section>
+  <div class="overflow-hidden rounded rounded-lg mt-6">
+    <table class="min-w-full mt-5divide-y divide-gray-200 dark:divide-gray-700">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr>
+          <th scope="col" class="py-3 px-4 pe-0">
+            <div class="flex items-center h-5">
+              <input id="hs-table-pagination-checkbox-all" type="checkbox" class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+              <label for="hs-table-pagination-checkbox-all" class="sr-only">Checkbox</label>
+            </div>
+          </th>
+          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-cyan-200 uppercase">brand</th>
+          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-cyan-200 uppercase">type</th>
+          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-cyan-200 uppercase">size</th>
+          <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-cyan-200 uppercase">price</th>
+          <th scope="col" class="px-8 ml-8 py-3 text-end text-xs font-medium text-cyan-200 uppercase">image</th>
+          <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-cyan-200 uppercase">Action</th>
+          <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-cyan-200 uppercase">Action</th>
+        </tr>
+      </thead>
+
+      <tbody class="divide-y divide-gray-200 bg-gray-800 dark:divide-gray-700">
+        @foreach($data as $data)
+        <tr>
+          <td class="py-3 ps-4">
+            <div class="flex items-center h-5">
+              <input id="hs-table-pagination-checkbox-1" type="checkbox" class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+              <label for="hs-table-pagination-checkbox-1" class="sr-only">Checkbox</label>
+            </div>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{{$data->brand}}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{{$data->type}}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{{$data->size}}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-slate-200 text-end text-sm font-medium">sh{{$data->price}}</td>
+          <td class="px-6 py-5 whitespace-nowrap text-slate-200 text-end text-sm font-medium"><img src="/gasimage/{{$data->image}}" class="rounded-lg"></td>
+          <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium"> <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent
+            text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"><a href="{{url('/deletegas', $data->id)}}">delete</a></button>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium"> <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent
+              text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"><a href="{{url('/editgas', $data->id)}}">edit</a></button>
+            </td>
+        </tr>
+@endforeach
+
+      </tbody>
+
+    </table>
+  </div>
+  <div class="py-1 px-4 ">
+    <nav class="flex items-center space-x-1">
+      <button type="button" class="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+        <span aria-hidden="true">«</span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button type="button" class="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10" aria-current="page">1</button>
+      <button type="button" class="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10">2</button>
+      <button type="button" class="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10">3</button>
+      <button type="button" class="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+        <span class="sr-only">Next</span>
+        <span aria-hidden="true">»</span>
+      </button>
+    </nav>
+  </div>
