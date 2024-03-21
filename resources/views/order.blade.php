@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    {{-- <nav class="bg-gray-800 fixed w-full p-4 z-10">
+    <nav class="bg-gray-800 fixed w-full p-4 z-10">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="flex items-center text-white text-lg font-semibold">
@@ -60,7 +60,7 @@
                 </ul>
             </div>
         </div>
-    </nav> --}}
+    </nav>
 
 
     <script>
@@ -74,7 +74,7 @@
 
     <div class="bg-white">
 
-        <div class="mx-auto max-w-100% px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 width:100%">
+        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <div class="mx-auto max-w-2xl my-4 text-center">
 
                 <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
@@ -204,7 +204,7 @@
 
                     </div>
                     <div class="flex  justify-center">
-                        <h3 class="mt-1 mr-3 text-lg font-bold text-gray-800"></h3>
+                        <h3 class="mt-1 mr-3 text-lg font-bold text-gray-800">{{$data->brand}}</h3>
                         <p class="mt-1 text-lg font-medium text-gray-800">sh{{$data->price}}</p>
                     </div>
                     <div class="flex  justify-center">
