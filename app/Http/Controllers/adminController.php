@@ -10,9 +10,15 @@ class adminController extends Controller
     public function index()
 {
     $data = gas::all();
-    return view('profile.admin.index',compact("data"));
+    return view('profile.admin.view',compact("data"));
 
 }
+
+public function create()
+{
+    return view('profile.admin.create');
+}
+
 public function upload (Request $request)
 {
     $data = new Gas;
@@ -26,7 +32,8 @@ public function upload (Request $request)
     $data->type=$request->type;
     $data->size=$request->size;
     $data->save();
-    return redirect()->back();
+    return redirect()->back()->with('success', 'Product created successfully.');
+
 }
 public function gasmenu()
 {
@@ -38,7 +45,7 @@ public function deletegas($id)
 {
     $data=gas::find($id);
     $data->delete();
-    return redirect()->back();
+    return redirect()->back()->with('success','Product deleted successfully');
 }
 public function editgas($id)
 {
@@ -58,7 +65,7 @@ public function update(Request $request,$id)
     $data->type=$request->type;
     $data->size=$request->size;
     $data->save();
-    return redirect()->back();
+    return redirect()->back()->with('success','Product updated successfully');
 
     return redirect()->back();
 }

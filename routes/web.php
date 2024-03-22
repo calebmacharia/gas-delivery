@@ -54,4 +54,9 @@ Route::resource('admin', adminController::class)->only(['index'])->middleware('a
 
 Route::post("/update/{id}", [AdminController::class,"update"]);
 
+
+// new route to view products
+Route::get('/admin/view', [AdminController::class, 'index'])->name('admin.view');
+Route::get('/admin/create', [AdminController::class, 'create'])->name('admin.create');
+
 require __DIR__.'/auth.php';
