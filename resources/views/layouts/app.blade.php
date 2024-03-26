@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -22,6 +23,8 @@
   <link rel="stylesheet" href="{{asset('assets/modules/summernote/summernote-bs4.css') }}">
 
   <!-- Template CSS -->
+
+
   <link rel="stylesheet" href="{{asset('assets/css/style.css') }}">
   <link rel="stylesheet" href="{{asset('assets/css/components.css') }}">
 <!-- Start GA -->
@@ -38,7 +41,7 @@
 <body>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
-        <div class="navbar-bg"></div>
+        <div class="navbar-bg bg-gray-700"></div>
         <nav class="navbar navbar-expand-lg main-navbar">
           <form class="form-inline mr-auto">
             <ul class="navbar-nav mr-3">
@@ -211,14 +214,7 @@
                 <li><a class="nav-link" href="features-tickets.html">Tickets</a></li>
               </ul>
             </li>
-            {{-- <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-ellipsis-h"></i> <span>Utilities</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="utilities-contact.html">Contact</a></li>
-                <li><a class="nav-link" href="utilities-invoice.html">Invoice</a></li>
-                <li><a href="utilities-subscribe.html">Subscribe</a></li>
-              </ul>
-            </li>            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> --}}
+
           </ul>
 
           <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
@@ -240,7 +236,7 @@
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-           &copy; 2024 <div class="bullet"></div> Gas delivery<a href="https://nauval.in/">Lucy & Caleb</a>
+           &copy; 2024 <div class="bullet text-black"></div> Gas delivery<a href="https://nauval.in/">lucy&Caleb</a>
         </div>
         <div class="footer-right">
 
