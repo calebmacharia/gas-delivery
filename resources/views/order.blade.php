@@ -72,20 +72,20 @@
     </div>
 
 
-    <div class="bg-white">
+    <div class="bg-white ">
 
         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <div class="mx-auto max-w-2xl my-4 text-center">
 
                 <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
             </div>
-            <div class="bg-slate-200 rounded-3xl my-5 p-4" >
+            <div class="bg-white rounded-3xl my-5 p-4" >
 
                 <div class="items-center  mt-5 mx-5 mx-auto">
                     <div class="mt-3 justify-center text-3xl mb-3 font-medium mr-2">Commodities</div>
                     <div class="flex ">
 
-                        <button class="bg-gray-500 mr-2 hover:bg-blue-700 px-3 text-white font-bold py-2 px-4 rounded rounded-3xl transition duration-300 ease-in-out">
+                        <button class="bg-gray-500 mr-2 hover:bg-gray-800 px-3 text-white font-bold py-2 px-4 rounded rounded-3xl transition duration-300 ease-in-out">
                             Gas
                           </button>
 
@@ -101,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="items-center mt-5 bg-cyan-100 mx-3 p-2 rounded mx-3 mx-auto">
+                <div class="items-center mt-5 bg-gray-100 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] mx-3 px-10 py-5 rounded mx-3 mx-auto">
                     <button class="flex items-center justify-between space-x-2 p-3 rounded max-w-m">
                         <div> <i class="fa-solid fa-filter flex w-4"></i></div>
                         <div class="font-medium">filter items by</div>
@@ -195,12 +195,12 @@
 
             </div>
             <div></div>
-            <div class="grid grid-cols-2 mx-auto rounded-3xl bg-black p-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-3 gap-7">
+            <div class="grid grid-cols-2 mx-auto rounded-4xl bg-white p-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-3 gap-7">
                 @foreach($data as $data)
-                <a href="#" class="group bg-white border rounded p-2">
+                <a href="#" class="group bg-white rounded-6xl shadow-2xl shadow-[inset_-12px_-8px_40px_#46464620] rounded-2xl p-2">
                     <div
-                        class="flex justify-center rounded mt-2 ">
-                        <img src="{{ asset('gasimage/' . $data->image) }}" alt="gasimage" class="rounded w-full  rounded-lg">
+                        class="flex justify-center rounded h-60 mt-2 px-6 py-4 transition delay-10000   hover:p-5 ">
+                        <img src="{{ asset('gasimage/' . $data->image) }}" alt="gasimage" class="rounded w-full   rounded-lg">
 
                     </div>
                     <div class="flex  justify-center">
@@ -212,7 +212,7 @@
                         <p class="mt-1 text-lg font-medium text-rose-600">{{$data->size}}</p>
                     </div>
                     <div class="flex justify-center ">
-                        <button class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        <button class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full">
                             Add to cart
                         </button>
                     </div>
