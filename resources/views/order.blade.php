@@ -212,7 +212,7 @@
                         <p class="mt-1 text-lg font-medium text-rose-600">{{$data->size}}</p>
                     </div>
                     <div class="flex justify-center ">
-                        <button class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full">
+                        <button class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 m-2 px-2 rounded-full">
                             Add to cart
                         </button>
                     </div>

@@ -59,4 +59,5 @@ Route::post("/update/{id}", [AdminController::class,"update"]);
 Route::get('/admin/view', [AdminController::class, 'index'])->name('admin.view');
 Route::get('/admin/create', [AdminController::class, 'create'])->name('admin.create');
 
+
 require __DIR__.'/auth.php';

@@ -14,11 +14,12 @@
             </div>
 </th>
 
-
+          <th scope="col" class="px-6 py-3 text-right text-xs uppercase">vendor</th>
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Brand</th>
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Type</th>
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Size</th>
-          <th scope="col" class="px-6 py-3 text-right text-xs uppercase">Price</th>
+          <th scope="col" class="px-6 py-3 text-right text-xs uppercase">price</th>
+          
          <div class="flex justify-center"><th scope="col" class=" py-3 text-center px-1 text-xs uppercase">Image</th></div>
            <th scope="col" class="px-6 py-3  text-center text-xs uppercase">Action</th>
           <th scope="col" class="px-6 py-3  text-center text-xs uppercase">Action</th>
@@ -34,10 +35,12 @@
               <label for="hs-table-pagination-checkbox-{{ $loop->index }}" class="sr-only">Checkbox</label>
             </div>
           </td>
+          <td class="px-6 py-4 text-right">{{ $item->user->name }}</td>
           <td class="px-6 py-4 whitespace-nowrap">{{ $item->brand }}</td>
           <td class="px-6 py-4 whitespace-nowrap">{{ $item->type }}</td>
           <td class="px-6 py-4 whitespace-nowrap">{{ $item->size }}</td>
           <td class="px-6 py-4 text-right">sh{{ $item->price }}</td>
+
           <td class=" py-4 text-center ">
             <div class="flex  justify-end">
             <img src="/gasimage/{{ $item->image }}" class="rounded-lg" style="max-width: 100px; max-height: 100px;">

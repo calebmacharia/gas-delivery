@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\Models\Gas;
@@ -31,15 +31,16 @@ public function upload (Request $request)
     $data->price=$request->price;
     $data->type=$request->type;
     $data->size=$request->size;
+    $data->user_id = Auth::id();
     $data->save();
     return redirect()->back()->with('success', 'Product created successfully.');
 
 }
 public function gasmenu()
 {
-    $data = gas::all();
-    return view('profile.admin.index',compact("data"));
+    $data = Gas::with('user')->get();
 
+    return view('profile.admin.index', compact('data'));
 }
 public function deletegas($id)
 {
