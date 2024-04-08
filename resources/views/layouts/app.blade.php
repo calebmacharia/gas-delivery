@@ -114,7 +114,7 @@
 
               <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
               <img alt="image" src="{{asset('assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
-              <div class="d-sn--none d-lg-inline-block">Hi,{{auth()->user()->name}}</div>
+              {{-- <div class="d-sn--none d-lg-inline-block">Hi,{{auth()->user()->name}}</div> --}}
               {{-- <div class="d-sm-none d-lg-inline-block"></div></a>   --}}
               <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
@@ -179,6 +179,24 @@
                 {{-- <li><a class="nav-link" href="">Edit product</a></li>{{--{{route('admin.products.edit', ['product' => $product]) }} --}}
                 {{-- <li><a class="nav-link" href="{{'admin.products.index'}}">Delete product</a></li>  --}}
                 <li><a class="nav-link" href="{{route('admin.view')}}">View product</a></li>
+                <li class="dropdown">
+                </ul>
+            </li>
+
+
+                    <li class="dropdown">
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Users</span></a>
+                    <ul class="dropdown-menu">
+
+
+                <li><a class="nav-link" href="{{route('users.create')}}">Add Users</a></li>
+                <li><a class="nav-link" href="{{ route('users.index')}}">view Users</a></li>
+
+              </ul>
+            </li>
+
+
+
 
             {{-- <li class="menu-header">Pages</li>
             <li class="dropdown">
@@ -198,7 +216,7 @@
                 <li><a class="nav-link" href="errors-404.html">404</a></li>
                 <li><a class="nav-link" href="errors-500.html">500</a></li>
               </ul> --}}
-            </li>
+            {{-- </li> --}}
              <li class="dropdown">
                {{-- <a href="#" class="nav-link has-dropdown"><i class="fas fa-bicycle"></i> <span>Features</span></a> --}}
               <ul class="dropdown-menu">

@@ -17,13 +17,13 @@
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Type</th>
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Size</th>
           <th scope="col" class="px-6 py-3 text-right text-xs uppercase">Price</th>
-          <th scope="col" class="px-6 py-3 text-right text-xs uppercase">Image</th>
-           <th scope="col" class="px-10 py-3 mr-5 text-right text-xs uppercase">Action</th>
+          <th scope="col" class="px-6 py-3 text-right text-xs uppercase mx-auto-right">Image</th>
+          <th scope="col" class="px-10 py-3 mr-5 text-right text-xs uppercase">Action</th>
           <th scope="col" class="px-10 py-3 mr-5 text-right text-xs uppercase">Action</th>
         </tr>
       </thead>
 
-      <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700">
+      <tbody class="bg-white divide-y divide-gray-700 dark:divide-gray-700">
         @foreach($data as $item)
         <tr>
           <td class="px-6 py-4">
@@ -37,21 +37,24 @@
           <td class="px-6 py-4 whitespace-nowrap">{{ $item->size }}</td>
           <td class="px-6 py-4 text-right">sh{{ $item->price }}</td>
           <td class="px-6 py-4 text-right">
-            <img src="/gasimage/{{ $item->image }}" class="rounded-lg" style="max-width: 100px; max-height: 100px;">
-          </td>
-          <td class="px-6 py-4 text-right">
-
-            <td class="px-3 py-4 tex">
-              <button type="button" class="inline-flex items-center px-3 py-1 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:border-red-700 focus:ring-red-300 disabled:opacity-50 disabled:pointer-events-none">
-                  <a href="{{ url('/deletegas', $item->id) }}">Delete</a>
-              </button>
+            <img src="/gasimage/{{ $item->image }}" class="rounded-lg" style="max-width: 600px;
+             max-height: 100px;">
           </td>
           <td class="px-3 py-4 text-right">
-              <button type="button" class="inline-flex items-center px-3 py-1 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:border-blue-700 focus:ring-blue-300 disabled:opacity-50 disabled:pointer-events-none">
-                  <a href="{{ url('/editgas', $item->id) }}">Edit</a>
-              </button>
+            <button type="button" class="inline-flex items-center px-3 py-1 border border-transparent
+             text-sm leading-4 font-medium rounded-md text-white bg-red-600 hover:bg-red-700
+             focus:outline-none focus:border-red-700 focus:ring-red-300 disabled:opacity-50
+             disabled:pointer-events-none">
+              <a href="{{ url('/deletegas', $item->id) }}">Delete</a>
+            </button>
           </td>
-
+          <td class="px-3 py-4 text-right">
+            <button type="button" class="inline-flex items-center px-3 py-1 border border-transparent
+            text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700
+            focus:outline-none focus:border-blue-700 focus:ring-blue-300 disabled:opacity-50
+            disabled:pointer-events-none">
+              <a href="{{ url('/editgas', $item->id) }}">Edit</a>
+            </button>
           </td>
         </tr>
         @endforeach

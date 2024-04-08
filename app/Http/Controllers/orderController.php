@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gas;
+use App\Models\Order;
 
 class orderController extends Controller
 {
@@ -36,7 +37,14 @@ class orderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $validatedData = $request->validate([
+        //     'first_name' => 'required',
+        //     'last_name' => 'required',
+        //     'phone_number' => 'required',
+        //     'delivery_location' => 'required',
+        // ]);
+        // order::create($validatedData);
+        // return redirect('/')->with('success','Order placed successful!');
     }
 
     /**
@@ -45,9 +53,9 @@ class orderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showForm()
     {
-        //
+        return view('form');
     }
 
     /**

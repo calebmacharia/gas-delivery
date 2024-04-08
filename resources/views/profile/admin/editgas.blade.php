@@ -22,7 +22,7 @@
     </div>
 @endif
 
-<section class="bg-white rounded-3xl dark:bg-gray-800 mx-auto md ">
+<section class=" rounded-3xb bg-gray-300 mx-auto md ">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-12">
         <h2 class="mb-4 text-xl font-bold text-gray-800 capitalize dark:text-white">edit product</h2>
         <form action="{{url('/update', $data->id)}}" method="post" enctype="multipart/form-data">

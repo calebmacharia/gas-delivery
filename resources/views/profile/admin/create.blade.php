@@ -6,14 +6,14 @@
 <head>
 
 </head>
-<body class="max-w-3xl mx-auto mt-4">
+<body class="max-w-3xl mx-auto mt-4 ">
     <div class="mx-auto max-w-2xl my-4 text-center">
 
         <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
     </div>
 
     {{-- add product form --}}
-<section class="bg-white rounded-3xl dark:bg-gray-800 mx-auto md ">
+<section class="rounded-3xl dark:bg-gray-800 mx-auto md bg-slate-500 ">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
         <h2 class="mb-4 text-xl font-bold text-gray-800 dark:text-white">Add a new product</h2>
         @if(session('success'))
@@ -68,9 +68,12 @@
                 </div>
 
             </div>
-            <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-                Add product
-            </button>
+
+  <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white
+          rounded-lg bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+    Add product
+</button>
+
         </form>
     </div>
 

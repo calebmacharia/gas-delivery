@@ -101,96 +101,52 @@
                     </div>
                 </div>
 
+
                 <div class="items-center mt-5 bg-cyan-100 mx-3 p-2 rounded mx-3 mx-auto">
-                    <button class="flex items-center justify-between space-x-2 p-3 rounded max-w-m">
-                        <div> <i class="fa-solid fa-filter flex w-4"></i></div>
-                        <div class="font-medium">filter items by</div>
-                    </button>
-                    <div class="mt-3 justify-center text-2xl mb-3 font-medium mr-2">Brands</div>
-                    <div class="flex flex-wrap mx-auto">
-                        <label for="Gas" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="Gas" name="brands" value="" />
-                            <span class="ml-2 text-lg">k-gas</span>
-                        </label>
+                    <div class="flex flex-col space-y-2">
+                        <div class="font-medium">Filter items by</div>
+                        <div>
+                            <label for="brands" class="block mb-1 text-lg">Brands</label>
+                            <select id="brands" name="brands" class="rounded-lg px-3 py-2">
+                                <option value="">Select a brand</option>
+                                <option value="k-gas">K-Gas</option>
+                                <option value="shell-gas">Shell Gas</option>
+                                <option value="afrigas">Afri Gas</option>
+                                <option value="pro_gas">Pro Gas</option>
+                                <option value="rubis gas">Rubis</option>
+                                <option value="lake gas">Lake Gas</option>
+                                <option value="total gas">Total Gas</option>
+                                <option value="sea gas">Sea Gas</option>
+                                <option value="mpishi gas">Mpishi Gas</option>
+                                <!-- Add other brand options here -->
+                            </select>
+                        </div>
+                        <div>
+                            <label for="type" class="block mb-1 text-lg">Type</label>
+                            <select id="type" name="type" class="rounded-lg px-3 py-2">
+                                <option value="">Select a type</option>
+                                <option value="refill">Refill</option>
+                                <option value="new-cylinder">New Cylinder</option>
+                                <!-- Add other type options here -->
+                            </select>
+                        </div>
+                        <div>
+                            <label for="size" class="block mb-1 text-lg">Size</label>
+                            <select id="size" name="size" class="rounded-lg px-3 py-2">
+                                <option value="">Select a size</option>
+                                <option value="6kg">6kg</option>
+                                <option value="13kg">13kg</option>
+                                <option value="50kg">50kg</option>
 
-                        <label for="brands" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="brands-entry" name="brands" value="Entry" @checked('Entry' == request('brands')) />
-                            <span class="ml-2 text-lg">shell-gas</span>
-                        </label>
-
-                        <label for="brands" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="brands" name="brands" value="Senior" @checked('Senior' == request('brands')) />
-                            <span class="ml-2 text-lg">afrigas</span>
-                        </label>
-
-                        <label for="brands-entry" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="brands-entry" name="brands" value="Entry" @checked('Entry' == request('brands')) />
-                            <span class="ml-2 text-lg">pro-gas</span>
-                        </label>
-
-                        <label for="brands" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="brands" name="brands" value="Senior" @checked('Senior' == request('brands')) />
-                            <span class="ml-2 text-lg">lake-gas</span>
-                        </label>
-
-                        <label for="brands-entry" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="brands-entry" name="brands" value="Entry" @checked('Entry' == request('brands')) />
-                            <span class="ml-2 text-lg">sea-gas</span>
-                        </label>
-
-                        <label for="brands" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="brands" name="brands" value="Senior" @checked('Senior' == request('brands')) />
-                            <span class="ml-2 text-lg">dell-gas</span>
-                        </label>
-                        <label for="brands" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="brands" name="brands" value="Senior" @checked('Senior' == request('brands')) />
-                            <span class="ml-2 text-lg">total-gas</span>
-                        </label>
-
-
-                    </div>
-                    <div class="mt-3 justify-center text-2xl mb-3 font-medium mr-2">Type</div>
-                    <div class="flex flex-wrap mx-auto">
-                        <label for="type" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="type" name="type" value="" />
-                            <span class="ml-2 text-lg">refill</span>
-                        </label>
-
-                        <label for="type" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="type" name="type" value=""  />
-                            <span class="ml-2 text-lg">new-cylinder</span>
-                        </label>
-                    </div>
-                    <div class="mt-3 justify-center text-2xl mb-3 font-medium mr-2">size</div>
-                    <div class="flex flex-wrap mx-auto">
-                        <label for="size" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="size" name="size" value="" />
-                            <span class="ml-2 text-lg">6kg</span>
-                        </label>
-
-                        <label for="size" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="size" name="size" value=""  />
-                            <span class="ml-2 text-lg">13kg</span>
-                        </label>
-
-                        <label for="size" class="mb-1 mr-4 flex items-center">
-                            <input type="radio" id="size" name="size" value=""  />
-                            <span class="ml-2 text-lg">50kg</span>
-                        </label>
-
-                    </div>
-                    <div class="flex mx-auto justify-between">
-                    <button type="button" class="text-white  bg-gradient-to-r from-teal-400
-                    via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none
-                    focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 text-black py-2.5 text-center me-2 mb-2">filter</button>
+                                <!-- Add other size options here -->
+                            </select>
+                        </div>
+                        <button type="button" class="text-white bg-gradient-to-r from-teal-400
+                         via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none
+                          focus:ring-teal-300 dark:focus:ring-teal-800
+                        font-medium rounded-lg text-sm px-5 text-black py-2.5 text-center me-2 mb-2">Filter</button>
                     </div>
                 </div>
-
-
-
-
-
-
 
 
             </div>
