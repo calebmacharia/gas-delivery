@@ -9,8 +9,9 @@ class adminController extends Controller
 {
     public function index()
 {
-    $data = gas::all();
+    $data = Gas::all();
     return view('profile.admin.view',compact("data"));
+
 
 }
 
@@ -38,9 +39,9 @@ public function upload (Request $request)
 }
 public function gasmenu()
 {
-    $data = Gas::with('user')->get();
+    $data = gas::all();
+    return view('profile.admin.index',compact("data"));
 
-    return view('profile.admin.index', compact('data'));
 }
 public function deletegas($id)
 {

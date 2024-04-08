@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    @vite('resources/css/app.css')
     <title>Document</title>
 </head>
 
@@ -195,7 +195,7 @@
 
             </div>
             <div></div>
-            <div class="grid grid-cols-2 mx-auto rounded-4xl bg-white p-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-3 gap-7">
+            <div class="grid grid-cols-1 mx-auto rounded-4xl bg-white p-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-3 gap-7">
                 @foreach($data as $data)
                 <a href="#" class="group bg-white rounded-6xl shadow-2xl shadow-[inset_-12px_-8px_40px_#46464620] rounded-2xl p-2">
                     <div

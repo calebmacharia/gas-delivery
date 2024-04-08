@@ -16,15 +16,16 @@
 
         <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
     </div>
-    @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+
 
 <section class=" rounded-3xl dark:bg-gray-800 mx-auto md ">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-12">
         <h2 class="mb-4 text-xl font-bold text-gray-800 capitalize dark:text-white">edit product</h2>
+        @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
         <form action="{{url('/update', $data->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">

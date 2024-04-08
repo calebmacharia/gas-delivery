@@ -23,7 +23,7 @@
     @endif
 
 
-        <form action="{{url('/uploadgas')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('upload')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <div class="sm:col-span-2">

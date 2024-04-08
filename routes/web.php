@@ -6,6 +6,7 @@ use App\Http\Controllers\orderController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\adminController;
 use \App\Http\Middleware\roleMiddleware;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +31,7 @@ Route::get('/order',fn()=> to_route('order'));
 Route::resource('order',orderController::class)
 ->only(['index']);
 
-Route::post("/uploadgas",[AdminController::class,"upload"]);
+Route::post("/uploadgas",[AdminController::class,"upload"])->name('upload');
 
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
@@ -60,4 +61,6 @@ Route::get('/admin/view', [AdminController::class, 'index'])->name('admin.view')
 Route::get('/admin/create', [AdminController::class, 'create'])->name('admin.create');
 
 
+Route::get('/cart', fn() => redirect()->route('cart'));
+Route::resource('cart', CartController::class)->only(['index']);
 require __DIR__.'/auth.php';
