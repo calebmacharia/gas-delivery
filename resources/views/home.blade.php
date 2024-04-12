@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 <body>
@@ -32,9 +33,9 @@
             <div class="hidden lg:flex lg:items-center lg:w-auto" id="menu">
                 <ul class="lg:flex items-center">
                     <li><a href="#" class="text-white hover:text-gray-400 px-4">Home</a></li>
-                    <li><a href= "{{route('order.index')}}"class="text-white hover:text-gray-400 px-4">Order Now</a></li>
+                    <li><a href= "{{route('order')}}"class="text-white hover:text-gray-400 px-4">Order Now</a></li>
                     <li><a href="#" class="text-white hover:text-gray-400 px-4">Privacy Policy</a></li>
-                    <i class="fa-solid fa-cart-shopping text-white text-2xl"></i>
+                    
                     <li>
                         <div class=" ">
                             @if (Route::has('login'))
@@ -66,14 +67,14 @@
     </script>
 </div>
 
-<div class="bg-cover no-repeat bg-center  h-screen   flex items-center justify-center font-bold" style="  background-image: url('{{ asset('images/ks.png') }}')  ">
+<div class="bg-cover no-repeat bg-center  h-screen   flex items-center justify-center font-bold" style="  background-image: url('{{ asset('images/men-transformed.jpeg') }}')  ">
     <div class="text-center mt-10 ">
-        <h1 class="text-5xl text-black font-extrabold text-black tracking-wide">Tosha Gas Delivery</h1>
+        <h1 class="text-6xl  font-extrabold  text-white tracking-wide">Tosha Gas Delivery</h1>
         <p class="text-4xl
-        text-black mt-10 font-extrabold subpixel-antialiased font-serif tracking-wide">ORDER COOKING GAS AND MORE!</p>
-        <h1 class="text-2xl mt-6 text-black font-extrabold   text-black tracking-wide">Delivery within 30 minutes</h1>
+        text-white mt-10 font-extrabold subpixel-antialiased capitalised font-serif tracking-wide">Order cooking gas and more!</p>
+        <h1 class="text-2xl mt-6  font-extrabold   text-grey-800 tracking-wide">Delivery within 30 minutes</h1>
         <button class="bg-blue-600 hover:bg-cyan-700 text-white font-extrabold tracking-wider text-lg mt-10 w-60 font-bold py-2 px-4 border border-blue-700 rounded">
-            <a href="{{route('order.index')}}">Order Now!</a>
+            <a href="{{route('order')}}">Order Now!</a>
 
           </button>
     </div>

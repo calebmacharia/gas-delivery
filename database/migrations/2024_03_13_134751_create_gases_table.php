@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('gases', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(\App\Models\User::class)->constrained();
             $table->string('image');
             $table->enum('brand', ['k_gas','shell_gas','afrigas','progas','total_gas','lake_gas','sea_gas','dell_gas']);
             $table->string('price');

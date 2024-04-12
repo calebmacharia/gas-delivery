@@ -2,10 +2,11 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\orderController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\adminController;
 use \App\Http\Middleware\roleMiddleware;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,11 +27,11 @@ Route::get('/home',fn()=> to_route('home'));
 Route::resource('home',homeController::class)
 ->only(['index']);
 
-Route::get('/order',fn()=> to_route('order'));
-Route::resource('order',orderController::class)
-->only(['index']);
 
-Route::post("/uploadgas",[AdminController::class,"upload"]);
+Route::get('/order', [OrderController::class, 'index'])->name('order');
+
+
+Route::post("/uploadgas",[AdminController::class,"upload"])->name('upload');
 
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
@@ -58,5 +59,11 @@ Route::post("/update/{id}", [AdminController::class,"update"]);
 // new route to view products
 Route::get('/admin/view', [AdminController::class, 'index'])->name('admin.view');
 Route::get('/admin/create', [AdminController::class, 'create'])->name('admin.create');
+
+
+Route::get('cart', [OrderController::class, 'cart'])->name('cart');
+Route::get('add-to-cart/{id}', [OrderController::class, 'addToCart'])->name('add_to_cart');
+Route::patch('update-cart', [OrderController::class, 'update'])->name('update_cart');
+Route::delete('remove-from-cart', [OrderController::class, 'remove'])->name('remove_from_cart');
 
 require __DIR__.'/auth.php';

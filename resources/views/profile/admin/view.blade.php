@@ -5,7 +5,7 @@
 
 <div class="overflow-x-auto">
     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-      <thead class="bg-gray-800 text-white">
+      <thead class="bg-green-300 text-white">
 
 <th scope="col" class="px-6">
             <div class="flex ">
@@ -14,11 +14,12 @@
             </div>
 </th>
 
-
+          <th scope="col" class="px-6 py-3 text-right text-xs uppercase">vendor</th>
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Brand</th>
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Type</th>
           <th scope="col" class="px-6 py-3 text-left text-xs uppercase">Size</th>
-          <th scope="col" class="px-6 py-3 text-right text-xs uppercase">Price</th>
+          <th scope="col" class="px-6 py-3 text-right text-xs uppercase">price</th>
+
          <div class="flex justify-center"><th scope="col" class=" py-3 text-center px-1 text-xs uppercase">Image</th></div>
            <th scope="col" class="px-6 py-3  text-center text-xs uppercase">Action</th>
           <th scope="col" class="px-6 py-3  text-center text-xs uppercase">Action</th>
@@ -34,10 +35,12 @@
               <label for="hs-table-pagination-checkbox-{{ $loop->index }}" class="sr-only">Checkbox</label>
             </div>
           </td>
-          <td class="px-6 py-4 whitespace-nowrap">{{ $item->brand }}</td>
-          <td class="px-6 py-4 whitespace-nowrap">{{ $item->type }}</td>
-          <td class="px-6 py-4 whitespace-nowrap">{{ $item->size }}</td>
-          <td class="px-6 py-4 text-right">sh{{ $item->price }}</td>
+          <td class="px-6 py-4 font-bold text-right">{{ $item->user->name }}</td>
+          <td class="px-6 py-4 font-bold whitespace-nowrap">{{ $item->brand }}</td>
+          <td class="px-6 py-4 font-bold whitespace-nowrap">{{ $item->type }}</td>
+          <td class="px-6 py-4 font-bold whitespace-nowrap">{{ $item->size }}</td>
+          <td class="px-6 py-4 font-bold text-right">sh{{ $item->price }}</td>
+
           <td class=" py-4 text-center ">
             <div class="flex  justify-end">
             <img src="/gasimage/{{ $item->image }}" class="rounded-lg" style="max-width: 100px; max-height: 100px;">
@@ -47,12 +50,13 @@
 
             <td class="px-3 py-4 text-right">
               <button type="button" class="inline-flex items-center px-3 py-1 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:border-red-700 focus:ring-red-300 disabled:opacity-50 disabled:pointer-events-none">
-                  <a href="{{ url('/deletegas', $item->id) }}">Delete</a>
+                  <a href="{{ url('/deletegas', $item->id) }}"><div class="text-white">
+                    Delete</div></a>
               </button>
           </td>
           <td class="px-3 py-4 text-right">
               <button type="button" class="inline-flex items-center px-3 py-1 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:border-blue-700 focus:ring-blue-300 disabled:opacity-50 disabled:pointer-events-none">
-                  <a href="{{ url('/editgas', $item->id) }}">Edit</a>
+                  <a href="{{ url('/editgas', $item->id) }}"><div class="text-white">Edit</div></a>
               </button>
           </td>
 
