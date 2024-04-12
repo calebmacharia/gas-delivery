@@ -1,94 +1,67 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\Gas;
 use App\Models\Order;
+use Illuminate\Http\Request;
 
 class orderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $data=gas::all();
-        return view('order',compact("data"));
+
+        public function index()
+        {
+            $data = Gas::all();
+            return view('order', compact('data'));
+        }
+
+        public function cart()
+        {
+            return view('cart');
+        }
+        public function addToCart($id)
+        {
+            $data = Gas::findOrFail($id);
+
+            $cart = session()->get('cart', []);
+
+            if(isset($cart[$id])) {
+                $cart[$id]['quantity']++;
+            }  else {
+                $cart[$id] = [
+                    "brand" => $data->brand,
+                    "type" => $data->type,
+                    "size" => $data->size,
+                    "image" => $data->image,
+                    "price" => $data->price,
+                    "quantity" => 1
+                ];
+            }
+
+            session()->put('cart', $cart);
+            return redirect()->back()->with('success', 'Gas add to cart successfully!');
+        }
+
+        public function update(Request $request)
+        {
+            if($request->id && $request->quantity){
+                $cart = session()->get('cart');
+                $cart[$request->id]["quantity"] = $request->quantity;
+                session()->put('cart', $cart);
+                session()->flash('success', 'Cart successfully updated!');
+            }
+        }
+
+        public function remove(Request $request)
+        {
+            if($request->id) {
+                $cart = session()->get('cart');
+                if(isset($cart[$request->id])) {
+                    unset($cart[$request->id]);
+                    session()->put('cart', $cart);
+                }
+                session()->flash('success', 'Gas successfully removed!');
+            }
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        // $validatedData = $request->validate([
-        //     'first_name' => 'required',
-        //     'last_name' => 'required',
-        //     'phone_number' => 'required',
-        //     'delivery_location' => 'required',
-        // ]);
-        // order::create($validatedData);
-        // return redirect('/')->with('success','Order placed successful!');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function showForm()
-    {
-        return view('form');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-}

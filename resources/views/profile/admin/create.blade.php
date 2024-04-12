@@ -6,14 +6,14 @@
 <head>
 
 </head>
-<body class="max-w-3xl mx-auto mt-4 ">
-    <div class="mx-auto max-w-2xl my-4 text-center">
+<body class="max-w-5xl mx-auto mt-4">
+    <div class="mx-auto max-w-5xl my-4 text-center">
 
         <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
     </div>
 
     {{-- add product form --}}
-<section class="rounded-3xl dark:bg-gray-800 mx-auto md bg-slate-500 ">
+<section class=" rounded-3xl bg-gray-800 mx-auto md ">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
         <h2 class="mb-4 text-xl font-bold text-gray-800 dark:text-white">Add a new product</h2>
         @if(session('success'))
@@ -23,7 +23,7 @@
     @endif
 
 
-        <form action="{{url('/uploadgas')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('upload')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <div class="sm:col-span-2">

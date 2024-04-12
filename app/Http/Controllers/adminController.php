@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\Models\Gas;
@@ -9,8 +9,9 @@ class adminController extends Controller
 {
     public function index()
 {
-    $data = gas::all();
+    $data = Gas::all();
     return view('profile.admin.view',compact("data"));
+
 
 }
 
@@ -31,6 +32,7 @@ public function upload (Request $request)
     $data->price=$request->price;
     $data->type=$request->type;
     $data->size=$request->size;
+    $data->user_id = Auth::id();
     $data->save();
     return redirect()->back()->with('success', 'Product created successfully.');
 

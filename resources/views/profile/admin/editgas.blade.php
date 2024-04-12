@@ -11,24 +11,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="max-w-3xl mx-auto mt-4">
+<body class="max-w-5xl mx-auto mt-4">
     <div class="mx-auto max-w-2xl my-4 text-center">
 
         <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
     </div>
-    @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
 
-<section class=" rounded-3xb bg-gray-300 mx-auto md ">
+
+<section class=" rounded-3xl dark:bg-gray-800 mx-auto md ">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-12">
         <h2 class="mb-4 text-xl font-bold text-gray-800 capitalize dark:text-white">edit product</h2>
+        @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
         <form action="{{url('/update', $data->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-                <div class="w-20  "> <img src="/gasimage/{{$data->image}}" alt="Logo" class=" mx-auto rounded-lg mr-2"><div class="text-white mt-2 text-sm capitalize font-semibold">old image</div></div>
+                <div class="w-20   "> <img src="/gasimage/{{$data->image}}" alt="Logo" class=" mx-auto rounded-lg mr-2"><div class="text-white mt-2 text-sm capitalize font-semibold">old image</div></div>
 
                 <div class="sm:col-span-2">
                     <label for="image" class="block mb-2 text-sm font-medium capitalize text-gray-800 dark:text-white">new image</label>
@@ -72,16 +73,11 @@
                 </div>
 
             </div>
-            <button type="submit" class="inline-flex items-center px-5  py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
+            <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;"class="inline-flex items-center px-5  py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
                 edit product
             </button>
 
-            <div>
 
-                <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Update Product</button>
-
-
-            </div>
         </form>
     </div>
 
