@@ -5,7 +5,7 @@
 
 <div class="overflow-x-auto">
     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-      <thead class="bg-gray-800 text-white">
+      <thead class="bg-green-300 text-white">
 
 <th scope="col" class="px-6">
             <div class="flex ">

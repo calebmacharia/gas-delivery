@@ -33,9 +33,9 @@
             <div class="hidden lg:flex lg:items-center lg:w-auto" id="menu">
                 <ul class="lg:flex items-center">
                     <li><a href="#" class="text-white hover:text-gray-400 px-4">Home</a></li>
-                    <li><a href= "{{route('order.index')}}"class="text-white hover:text-gray-400 px-4">Order Now</a></li>
+                    <li><a href= "{{route('order')}}"class="text-white hover:text-gray-400 px-4">Order Now</a></li>
                     <li><a href="#" class="text-white hover:text-gray-400 px-4">Privacy Policy</a></li>
-                    <i class="fa-solid fa-cart-shopping text-white text-2xl"></i>
+                    
                     <li>
                         <div class=" ">
                             @if (Route::has('login'))
@@ -74,7 +74,7 @@
         text-white mt-10 font-extrabold subpixel-antialiased capitalised font-serif tracking-wide">Order cooking gas and more!</p>
         <h1 class="text-2xl mt-6  font-extrabold   text-grey-800 tracking-wide">Delivery within 30 minutes</h1>
         <button class="bg-blue-600 hover:bg-cyan-700 text-white font-extrabold tracking-wider text-lg mt-10 w-60 font-bold py-2 px-4 border border-blue-700 rounded">
-            <a href="{{route('order.index')}}">Order Now!</a>
+            <a href="{{route('order')}}">Order Now!</a>
 
           </button>
     </div>
