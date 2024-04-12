@@ -79,78 +79,7 @@
 
                 <h2 class="text-3xl font-bold tracking-md text-slate-800 sm:text-4xl">Tosha Gases</h2>
             </div>
-            <div class="bg-slate-200 rounded-3xl my-5 p-4" >
-
-                <div class="items-center  mt-5 mx-5 mx-auto">
-                    <div class="mt-3 justify-center text-3xl mb-3 font-medium mr-2">Commodities</div>
-                    <div class="flex ">
-
-                        <button class="bg-gray-500 mr-2 hover:bg-blue-700 px-3 text-white font-bold py-2 px-4 rounded rounded-3xl transition duration-300 ease-in-out">
-                            Gas
-                          </button>
-
-                     <button class="bg-gray-800 mr-2 hover:bg-blue-700 px-3 text-white font-bold py-2 px-4 rounded transition rounded-3xl duration-300 ease-in-out">
-                            Cookers
-                          </button>
-                          <button class="bg-gray-800 mr-2 hover:bg-blue-700 px-3 text-white font-bold py-2 px-4 rounded rounded-3xl transition duration-300 ease-in-out">
-                            Accessories
-                          </button>
-
-
-
-                    </div>
-                </div>
-
-
-                <div class="items-center mt-5 bg-cyan-100 mx-3 p-2 rounded mx-3 mx-auto">
-                    <div class="flex flex-col space-y-2">
-                        <div class="font-medium">Filter items by</div>
-                        <div>
-                            <label for="brands" class="block mb-1 text-lg">Brands</label>
-                            <select id="brands" name="brands" class="rounded-lg px-3 py-2">
-                                <option value="">Select a brand</option>
-                                <option value="k-gas">K-Gas</option>
-                                <option value="shell-gas">Shell Gas</option>
-                                <option value="afrigas">Afri Gas</option>
-                                <option value="pro_gas">Pro Gas</option>
-                                <option value="rubis gas">Rubis</option>
-                                <option value="lake gas">Lake Gas</option>
-                                <option value="total gas">Total Gas</option>
-                                <option value="sea gas">Sea Gas</option>
-                                <option value="mpishi gas">Mpishi Gas</option>
-                                <!-- Add other brand options here -->
-                            </select>
-                        </div>
-                        <div>
-                            <label for="type" class="block mb-1 text-lg">Type</label>
-                            <select id="type" name="type" class="rounded-lg px-3 py-2">
-                                <option value="">Select a type</option>
-                                <option value="refill">Refill</option>
-                                <option value="new-cylinder">New Cylinder</option>
-                                <!-- Add other type options here -->
-                            </select>
-                        </div>
-                        <div>
-                            <label for="size" class="block mb-1 text-lg">Size</label>
-                            <select id="size" name="size" class="rounded-lg px-3 py-2">
-                                <option value="">Select a size</option>
-                                <option value="6kg">6kg</option>
-                                <option value="13kg">13kg</option>
-                                <option value="50kg">50kg</option>
-
-                                <!-- Add other size options here -->
-                            </select>
-                        </div>
-                        <button type="button" class="text-white bg-gradient-to-r from-teal-400
-                         via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none
-                          focus:ring-teal-300 dark:focus:ring-teal-800
-                        font-medium rounded-lg text-sm px-5 text-black py-2.5 text-center me-2 mb-2">Filter</button>
-                    </div>
-                </div>
-
-
-            </div>
-            <div></div>
+         
             <div class="grid grid-cols-2 mx-auto rounded-2xl bg-gray-300 p-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-rows-3 gap-7">
                 @foreach($data as $data)
                 <a href="#" class="group bg-white  shadow-2xl shadow-gray-800/100 rounded-2xl p-2">

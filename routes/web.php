@@ -7,6 +7,9 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CookerController;
+ use App\Http\Controllers\ordercookerscontroller;
+
 use \App\Http\Middleware\roleMiddleware;
 /*
 |--------------------------------------------------------------------------
@@ -70,7 +73,7 @@ Route::get('/admin/create', [AdminController::class, 'create'])->name('admin.cre
  Route::post('/billing',[BillingController::class,'submitform'])->name('billing.submit');
 
  //users routes
- 
+
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 Route::post('/users/store', [UserController::class, 'store'])->name('users.store');
@@ -78,6 +81,25 @@ Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show')
 Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('/users/{user}/update', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{user}/delete', [UserController::class, 'destroy'])->name('users.destroy');
+
+//cookers route
+
+
+Route::get('/cookers', [CookerController::class, 'index'])->name('cookers.index');
+Route::get('/cookers/create', [CookerController::class, 'create'])->name('cookers.create');
+Route::post('/cookers', [CookerController::class, 'store'])->name('cookers.store');
+Route::get('/cookers/{cooker}/edit', [CookerController::class, 'edit'])->name('cookers.edit');
+Route::put('/cookers/{cooker}', [CookerController::class, 'update'])->name('cookers.update');
+Route::delete('/cookers/{cooker}/delete',[CookerController::class,'destroy'])->name('cookers.destroy');
+
+//ordercookers route
+
+Route::get('/ordercookers', [ordercookerscontroller::class, 'index'])->name('cookers.ordercookers');
+
+
+
+
+
 
 
 

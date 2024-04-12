@@ -24,7 +24,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            background-color: #333;
+            background-color: black;
             color: white;
         }
 
@@ -52,7 +52,7 @@
         /* Other styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: whitesmoke; /* Set background color */
+            background-color: black; /* Set background color */
             padding: 10px;
         }
 
@@ -64,7 +64,7 @@
         }
 
         h2 {
-            border: 2px solid #007bff; /* Blue border */
+            /* border: 2px solid #007bff; Blue border */
             padding: 10px;
             text-align: center;
             background-color: #fff;
@@ -101,7 +101,7 @@
         }
 
         p {
-            color: black; /* Gray text color */
+            color: white; /* Gray text color */
             margin-top: 20px;
 
         }

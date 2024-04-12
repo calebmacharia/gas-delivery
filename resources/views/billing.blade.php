@@ -113,7 +113,7 @@
 
         <button type="submit">Submit</button>
 
-        <p>Payment to be done only through Mpesa</p>
+        <h4>Payment to be done only through Mpesa</h4>
 
     </form>
     <h2>CONNECT WITH US

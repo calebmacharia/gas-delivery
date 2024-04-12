@@ -172,16 +172,38 @@
             </li>
             {{-- <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li> --}}
             <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Products</span></a>
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Gas Products</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{route('admin.create')}}">Create Product</a></li>
+                <li><a class="nav-link" href="{{route('admin.create')}}">Create Gas Product</a></li>
 
                 {{-- <li><a class="nav-link" href="">Edit product</a></li>{{--{{route('admin.products.edit', ['product' => $product]) }} --}}
                 {{-- <li><a class="nav-link" href="{{'admin.products.index'}}">Delete product</a></li>  --}}
-                <li><a class="nav-link" href="{{route('admin.view')}}">View product</a></li>
+                <li><a class="nav-link" href="{{route('admin.view')}}">View Gas product</a></li>
                 <li class="dropdown">
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Cookers Products</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="{{route('cookers.create')}}">Create Cookers Product</a></li>
+
+                  {{-- <li><a class="nav-link" href="">Edit product</a></li>{{--{{route('admin.products.edit', ['product' => $product]) }} --}}
+                  {{-- <li><a class="nav-link" href="{{'admin.products.index'}}">Delete product</a></li>  --}}
+                  <li><a class="nav-link" href="{{route('cookers.index')}}">View Cookers product</a></li>
+                  <li class="dropdown">
+                  </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Accessories </span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="{{route('admin.create')}}">Create Accesories</a></li>
+
+                  {{-- <li><a class="nav-link" href="">Edit product</a></li>{{--{{route('admin.products.edit', ['product' => $product]) }} --}}
+                  {{-- <li><a class="nav-link" href="{{'admin.products.index'}}">Delete product</a></li>  --}}
+                  <li><a class="nav-link" href="{{route('admin.view')}}">View Accesories</a></li>
+                  <li class="dropdown">
+                  </ul>
+              </li>
 
 
                     <li class="dropdown">
