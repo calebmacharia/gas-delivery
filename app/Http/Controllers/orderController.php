@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Gas;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class orderController extends Controller
@@ -62,4 +63,5 @@ class orderController extends Controller
             }
         }
     }
+
 

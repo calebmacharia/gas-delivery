@@ -59,8 +59,6 @@
                   <a href="{{ url('/editgas', $item->id) }}"><div class="text-white">Edit</div></a>
               </button>
           </td>
-
-          </td>
         </tr>
         @endforeach
       </tbody>
